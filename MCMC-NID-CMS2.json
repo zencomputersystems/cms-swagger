@@ -3010,6 +3010,12 @@
                                         "modifier": "account",
                                         "value": "(.*)",
                                         "isRegex": true
+                                    },
+                                    {
+                                        "target": "query",
+                                        "modifier": "category",
+                                        "value": "(.*)",
+                                        "isRegex": true
                                     }
                                 ],
                                 "rulesOperator": "OR",
@@ -3054,6 +3060,47 @@
                                     }
                                 ],
                                 "rulesOperator": "AND",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "api/category/snapshot/view",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\r\n    \"current_page\": 1,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1000000,\r\n            \"url\": \"http://personafiza.blogspot.com\",\r\n            \"updated_at\": null\r\n        },\r\n        {\r\n            \"id\": 1,\r\n            \"url\": \"https://www.shoutmeloud.com\",\r\n            \"updated_at\": null\r\n        },\r\n        {\r\n            \"id\": 2000000,\r\n            \"url\": \"http://www.ciklilyputih.com\",\r\n            \"updated_at\": null\r\n        }\r\n    ],\r\n    \"first_page_url\": \"https://office.glotechprima.my:5057/api/category/snapshot/view?page=1\",\r\n    \"from\": 1,\r\n    \"last_page\": 1,\r\n    \"last_page_url\": \"https://office.glotechprima.my:5057/api/category/snapshot/view?page=1\",\r\n    \"links\": [\r\n        {\r\n            \"url\": null,\r\n            \"label\": \"&laquo; Previous\",\r\n            \"active\": false\r\n        },\r\n        {\r\n            \"url\": \"https://office.glotechprima.my:5057/api/category/snapshot/view?page=1\",\r\n            \"label\": \"1\",\r\n            \"active\": true\r\n        },\r\n        {\r\n            \"url\": null,\r\n            \"label\": \"Next &raquo;\",\r\n            \"active\": false\r\n        }\r\n    ],\r\n    \"next_page_url\": null,\r\n    \"path\": \"https://office.glotechprima.my:5057/api/category/snapshot/view\",\r\n    \"per_page\": 10,\r\n    \"prev_page_url\": null,\r\n    \"to\": 3,\r\n    \"total\": 3\r\n}",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "query",
+                                        "modifier": "type",
+                                        "value": "(.*)",
+                                        "isRegex": true
+                                    },
+                                    {
+                                        "target": "query",
+                                        "modifier": "id",
+                                        "value": "(.*)",
+                                        "isRegex": true
+                                    }
+                                ],
+                                "rulesOperator": "OR",
                                 "disableTemplating": false
                             }
                         ],
@@ -3126,7 +3173,7 @@
                     {
                         "uuid": "",
                         "documentation": "",
-                        "method": "get",
+                        "method": "post",
                         "endpoint": "api/statistic/option/year",
                         "responses": [
                             {
@@ -3439,6 +3486,71 @@
                                         "modifier": "type",
                                         "value": "nomnp",
                                         "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "post",
+                        "endpoint": "api/cms/CreateRequest",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\r\n    \"report_number\": \"testing-phone-0001-api\",\r\n    \"cms_number\": \"cmsp-0001-api\",\r\n    \"numberdetail\": \"0183898501\",\r\n    \"telcoId\": null,\r\n    \"date1\": null,\r\n    \"date2\": null,\r\n    \"type\": \"Phone\",\r\n    \"date\": \"2021-07-26 20:01:46\",\r\n    \"status\": \"Insert request successfull\",\r\n    \"code\": \"1\"\r\n}",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "query",
+                                        "modifier": "report_number",
+                                        "value": "(.*)",
+                                        "isRegex": true
+                                    },
+                                    {
+                                        "target": "query",
+                                        "modifier": "cms_number",
+                                        "value": "(.*)",
+                                        "isRegex": true
+                                    },
+                                    {
+                                        "target": "query",
+                                        "modifier": "numberdetail",
+                                        "value": "(.*)",
+                                        "isRegex": true
+                                    },
+                                    {
+                                        "target": "query",
+                                        "modifier": "type",
+                                        "value": "(.*)",
+                                        "isRegex": true
+                                    },
+                                    {
+                                        "target": "query",
+                                        "modifier": "date1",
+                                        "value": "(.*)",
+                                        "isRegex": true
+                                    },
+                                    {
+                                        "target": "query",
+                                        "modifier": "date2",
+                                        "value": "(.*)",
+                                        "isRegex": true
                                     }
                                 ],
                                 "rulesOperator": "OR",
